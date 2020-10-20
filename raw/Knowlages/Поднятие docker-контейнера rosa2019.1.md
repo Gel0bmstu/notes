@@ -63,28 +63,3 @@ abf mock -v
 ```
 
 Для последующего входа в шелл контейнера можно использовать альяс *rce (Rosa Container Enter).*
-
-id: d2561fe074ff402ca86f8e549837f8c6
-parent_id: ea8c919bbc2e4577a1ef575687896954
-created_time: 2020-10-19T22:50:00.283Z
-updated_time: 2020-10-20T11:00:51.500Z
-is_conflict: 0
-latitude: 0.00000000
-longitude: 0.00000000
-altitude: 0.0000
-author: 
-source_url: 
-is_todo: 0
-todo_due: 0
-todo_completed: 0
-source: joplin-desktop
-source_application: net.cozic.joplin-desktop
-application_data: 
-order: 1603147955217
-user_created_time: 2020-10-19T22:50:00.283Z
-user_updated_time: 2020-10-20T11:00:51.500Z
-encryption_cipher_text: 
-encryption_applied: 0
-markup_language: 1
-is_shared: 0
-type_: 1
