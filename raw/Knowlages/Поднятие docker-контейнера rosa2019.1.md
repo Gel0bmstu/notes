@@ -1,7 +1,5 @@
 Поднятие docker-контейнера rosa2019.1
 
-Поднятие docker-контейнера rosa2019.1
-
 ## Поднятие docker-контейнера rosa2019.1
 
 Поднимаем контейнер с abf, abf-c-c и mock для сборки пакетов
@@ -9,7 +7,7 @@
 1.  Разворачиваем пустой контейнер последнего релиза rosa2019.1:
 
 ```
-docker run -td --privileged=true -v /home/твой_юзер/omv:/home/omv --name rosa rosalab/rosa2019.1
+docker run -td --privileged=true -v /home/gel0/omv:/home/omv --name rosa rosalab/rosa2019.1
 ```
 
 2.  Входим в шелл контейнера от юзера *omv*, все последующие операции выполняются внутри:
@@ -37,7 +35,7 @@ sudo docker exec -ti -u omv rosa /bin/bash
     ```
     git clone https://github.com/Gel0bmstu/bashscripts ~/bashscripts &&
     cd ~/bashscripts ;
-    python3 set_dotfiles.py ;
+    python3 set_dotfiles.py &&
     . ~/.bashrc
     ```
 4.  Настраиваем abf:
@@ -63,3 +61,5 @@ abf get dos2unix &&
 cd dos2unix ;
 abf mock -v
 ```
+
+Для последующего входа в шелл контейнера можно использовать альяс *rce (Rosa Container Enter).*
