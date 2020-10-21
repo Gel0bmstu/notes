@@ -1,7 +1,6 @@
 Поднятие docker-контейнера rosa2019.1
 
 ## Поднятие docker-контейнера rosa2019.1
-
 Поднимаем контейнер с abf, abf-c-c и mock для сборки пакетов
 
 1.  Разворачиваем пустой контейнер последнего релиза rosa2019.1:
@@ -34,8 +33,9 @@ sudo docker exec -ti -u omv rosa /bin/bash
     
     ```
     git clone https://github.com/Gel0bmstu/bashscripts ~/bashscripts &&
-    cd ~/bashscripts ;
+    pushd ~/bashscripts ;
     python3 set_dotfiles.py &&
+    popd
     . ~/.bashrc
     ```
 4.  Настраиваем abf:
@@ -44,7 +44,7 @@ sudo docker exec -ti -u omv rosa /bin/bash
         
     - запишем в *~/.abfcfg*:  
         [https://gist.githubusercontent.com/Gel0bmstu/94ba5ee26cb29015be5a1f76f94b9668/raw/7c6dbbeeda798ad0fb05ebe2dad26a117f801e81/.abfcfg](https://gist.githubusercontent.com/Gel0bmstu/94ba5ee26cb29015be5a1f76f94b9668/raw/7c6dbbeeda798ad0fb05ebe2dad26a117f801e81/.abfcfg)  
-        Здесь необнодимо засетить совои nickname и pass на abf.
+        Здесь необнодимо засетить совои *nickname* и *pass* на abf.
         
     - генерим пару ssh ключей и прокидываем через UI на [https://abf.io/settings/ssh_keys](https://abf.io/settings/ssh_keys)
         
