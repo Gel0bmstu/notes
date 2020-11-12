@@ -23,11 +23,13 @@ sudo docker exec -ti -w /home/omv rosa /bin/bash
     ```
     dnf update && dnf upgrade
     ```
+    
     - устанавливаем необходимые пакеты
     
     ```
-    dnf install --nogpgcheck -y vim-enhanced sudo rpmdevtools abf-c-c abb basesystem-build git mock
+    dnf install --nogpgcheck -y vim-enhanced sudo rpmdevtools abf-c-c abb basesystem-build git mock termcap rootfiles
     ```
+    
     - сетим свои дотфайлы для *root*
     
     ```н
@@ -37,6 +39,7 @@ sudo docker exec -ti -w /home/omv rosa /bin/bash
     popd
     . ~/.bashrc
     ```
+    
     - добавляем юзера
     
     ```
@@ -44,7 +47,9 @@ sudo docker exec -ti -w /home/omv rosa /bin/bash
     chown -R omv:omv /home/omv && 
     su - omv
     ```
+    
     Сетим дотфайлы и для него.
+    
 4.  Настраиваем abf:
     
     - запишим в */etc/abf/mock/configs/default.cfg* следующий конфиг: [https://gist.githubusercontent.com/Gel0bmstu/310a0802128773ab8adecde6b3f6ad7a/raw/bf911d310e3a2ff415e677ad1446c7b6428f0e46/abf\_mock\_default.cfg](https://gist.githubusercontent.com/Gel0bmstu/310a0802128773ab8adecde6b3f6ad7a/raw/bf911d310e3a2ff415e677ad1446c7b6428f0e46/abf_mock_default.cfg)
@@ -56,13 +61,12 @@ sudo docker exec -ti -w /home/omv rosa /bin/bash
     - запишем в *~/.abfcfg*:  
         [https://gist.githubusercontent.com/Gel0bmstu/94ba5ee26cb29015be5a1f76f94b9668/raw/7c6dbbeeda798ad0fb05ebe2dad26a117f801e81/.abfcfg](https://gist.githubusercontent.com/Gel0bmstu/94ba5ee26cb29015be5a1f76f94b9668/raw/7c6dbbeeda798ad0fb05ebe2dad26a117f801e81/.abfcfg)  
         Здесь необнодимо засетить совои *nickname* и *pass* на abf.
-        
+    
     ```
     sudo wget -O ~/.abfcfg https://gist.githubusercontent.com/Gel0bmstu/94ba5ee26cb29015be5a1f76f94b9668/raw/7c6dbbeeda798ad0fb05ebe2dad26a117f801e81/.abfcfg
     ```
-        
+    
     - генерим пару ssh ключей и прокидываем через UI на [https://abf.io/settings/ssh_keys](https://abf.io/settings/ssh_keys)
-        
     
     ```
     ssh-keygen && cat ~/.ssh/id_rsa.pub

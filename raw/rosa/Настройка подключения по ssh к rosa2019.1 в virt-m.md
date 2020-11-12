@@ -34,11 +34,12 @@ ssh root@192.168.122.240
 ---
 Скрипт для настройки окружения на новой машине
 ```
-sudo dnf install vim git -y &&
 echo "" | sudo tee /etc/ssh/denyusers > /dev/null &&
 sudo sed -i "s/\#PermitRootLogin\ prohibit\-password/PermitRootLogin\ yes/g" /etc/ssh/sshd_config && 
 echo 123 | sudo passwd root --stdin &&
-sudo systemctl restart sshd &&
+sudo systemctl restart sshd
+
+sudo dnf install vim -y &&
 sudo git clone https://github.com/gel0bmstu/bashscripts /root/bashscripts &&
 sudo python3 /root/bashscripts/set_dotfiles.py
 ```
