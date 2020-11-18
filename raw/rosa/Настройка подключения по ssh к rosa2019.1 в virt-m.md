@@ -2,7 +2,7 @@
 
 ## Настройка подключения по ssh к rosa2019.1 в virt-manager
 
-Отчищаем файл denyusers, чтобы дать возможность нам коннектиться к машине от любого юзера
+На машинке отчищаем файл denyusers, чтобы дать возможность нам коннектиться к машине от любого юзера
 ```
 echo "" | sudo tee /etc/ssh/denyusers > /dev/null
 ```
@@ -14,11 +14,11 @@ sudo sed -i "s/\#PermitRootLogin\ prohibit\-password/PermitRootLogin\ yes/g" /et
 ```
 echo 123 | sudo passwd root --stdin
 ```
-рестартим sshd systemd службу
+рестартим sshd systemd службу.
 ```
 sudo systemctl restart sshd
 ```
-далее на хосте чекаем ip адресс развернутой машинки. Здесь *default* - имя интерфейса, который машинка используется для похода в сеть.
+Далее на хосте чекаем ip адресс развернутой машинки. Здесь *default* - имя интерфейса, который машинка используется для похода в сеть.
 ```
 virsh net-dhcp-leases default
 
@@ -40,6 +40,6 @@ echo 123 | sudo passwd root --stdin &&
 sudo systemctl restart sshd
 
 sudo dnf install vim -y &&
-sudo git clone https://github.com/gel0bmstu/bashscripts $HOME/bashscripts &&
-sudo python3 $HOME/bashscripts/set_dotfiles.py
+git clone https://github.com/gel0bmstu/bashscripts $HOME/bashscripts &&
+python3 $HOME/bashscripts/set_dotfiles.py
 ```
