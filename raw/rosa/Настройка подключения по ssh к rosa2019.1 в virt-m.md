@@ -39,7 +39,8 @@ sudo sed -i "s/\#PermitRootLogin\ prohibit\-password/PermitRootLogin\ yes/g" /et
 echo 123 | sudo passwd root --stdin &&
 sudo systemctl restart sshd
 
-sudo dnf install vim -y &&
+dnf install sudo git vim -y &&
 git clone https://github.com/gel0bmstu/bashscripts $HOME/bashscripts &&
-python3 $HOME/bashscripts/set_dotfiles.py
+python3 $HOME/bashscripts/set_dotfiles.py &&
+. $HOME/.bashrc
 ```

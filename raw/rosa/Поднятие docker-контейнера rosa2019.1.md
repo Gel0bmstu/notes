@@ -63,7 +63,7 @@ sudo docker exec -ti -w /home/omv rosa /bin/bash
         Здесь необнодимо засетить совои *nickname* и *pass* на abf.
     
     ```
-    sudo wget -O ~/.abfcfg https://gist.githubusercontent.com/Gel0bmstu/94ba5ee26cb29015be5a1f76f94b9668/raw/7c6dbbeeda798ad0fb05ebe2dad26a117f801e81/.abfcfg
+    wget -O ~/.abfcfg https://gist.githubusercontent.com/Gel0bmstu/94ba5ee26cb29015be5a1f76f94b9668/raw/7c6dbbeeda798ad0fb05ebe2dad26a117f801e81/.abfcfg
     ```
     
     - генерим пару ssh ключей и прокидываем через UI на [https://abf.io/settings/ssh_keys](https://abf.io/settings/ssh_keys)
