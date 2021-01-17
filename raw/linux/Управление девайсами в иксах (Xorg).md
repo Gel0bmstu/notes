@@ -13,3 +13,8 @@ xinput list-props <DEVICE_ID>
 ```
 xinput --set-prop <DEVICE_ID> '<FULL_PROP_NAME>' <PROP_VALUE>
 ```
+
+Например, чтобы увеличить сенсу тачпада, необходимо выполнить:
+```
+xinput --set-prop 12 'libinput Accel Speed' 0.4
+```
